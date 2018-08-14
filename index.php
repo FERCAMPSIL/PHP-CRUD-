@@ -1,33 +1,13 @@
 <?php session_start()?>
 
-<!DOCTYPE html>
+<?php include_once'include/header.inc.php'?>
 
-<html>
-    <head>
-    <meta charset="UTF-8">
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="materialize/css/materialize.min.css">
-    <title></title>
-</head>
-<body>
+<?php include_once'include/menu.inc.php'?>
 
-
-<nav class="blue-grey">
-    <div class="nav-wrapper container">
-
-        <div class="brand-logo light">Sistema de cadastro</div>
-        <ul class="right">
-            <li><a href="http://"><i class="material-icons left">account_circle</i>Cadastro</a></li>
-            <li><a href="http://"><i class="material-icons left">search</i>Consultas</a></li>
-          
-        </ul>
-        </div>
-</nav>
 <div class="row container">
     <p>&nbsp;</p>
 <form action="data/create.php" method="post" class="col s12">
-    <fieldset class="formulario">
+    <fieldset class="formulario" style="padding:15px">
         <legend><img src="img/Small-mario.png" alt="[img]" width="100"></legend>
         <h5 class="light center ">Cadastro de clientes</h5>
 
@@ -67,22 +47,10 @@
 
 
 </form>
-
-
 </div>
 
+<?php include_once'include/footer.inc.php'?>
 
 
 
-<script type="text/javascript" src="materialize/js/jquery-3.3.1.min.js"></script>
-<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
 
-
-<script type="text/javascript">
-$(document).ready(function(){
-
-});
-</script>
-
-</body>
-</html>
