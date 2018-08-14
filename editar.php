@@ -1,5 +1,10 @@
-<?php include_once'include/header.inc.php'?>
-<?php include_once'include/menu.inc.php'?>
+<?php
+ session_start (); 
+include_once'include/header.inc.php';
+ include_once'include/menu.inc.php';
+
+ 
+ ?>
 
     <div class="row container">
         <div class="col s12">
@@ -9,10 +14,13 @@
 
     <?php
     include_once'data/connection.php';
+
     $id=filter_input(INPUT_GET,'id', FILTER_SANITIZE_NUMBER_INT);
+    $_SESSION['id']= $id;
     $querySelect=$link->query("select *from tb_clientes where id='$id'");
+
     while($registros=$querySelect->fetch_assoc()){
-        $id=$registros['id'];
+    
         $name=$registros['nome'];
         $email=$registros['email'];
         $phone=$registros['telefone'];
