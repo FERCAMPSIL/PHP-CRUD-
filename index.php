@@ -1,3 +1,5 @@
+<?php session_start()?>
+
 <!DOCTYPE html>
 
 <html>
@@ -28,6 +30,16 @@
     <fieldset class="formulario">
         <legend><img src="img/Small-mario.png" alt="[img]" width="100"></legend>
         <h5 class="light center ">Cadastro de clientes</h5>
+
+        <?php
+
+            if(isset($_SESSION['msg'])){
+
+                echo $_SESSION['msg'];
+                session_unset();
+            }
+
+        ?>
 
         <div class="inpu field col s12">
             <i class="material-icons prefix">account_circle</i>
